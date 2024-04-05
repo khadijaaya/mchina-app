@@ -4,7 +4,7 @@ import InputBox from '../../components/formes/InputBox';
 import SubmitButton from '../../components/formes/SubmitButton';
 // const image = require ("../../assets/City-drive.png") ;
 
-const SingUp = () => {
+const SignUp = () => {
   //states
   const[name, setName]= useState('')
   const[age, setAge]= useState('')
@@ -86,4 +86,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default SingUp;
+export default SignUp;

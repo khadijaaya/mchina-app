@@ -1,8 +1,8 @@
-import SingUp from './screens/auth/SingUp';
+import SignUp from './screens/auth/SignUp';
 
 export default function App() {
   return (
-    <SingUp />
+    <SignUp />
   );
 } ;
 
