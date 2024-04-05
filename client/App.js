@@ -1,9 +1,9 @@
-
-import Register from './screens/auth/Register';
+import SingUp from './screens/auth/SingUp';
 
 export default function App() {
   return (
-    <Register/>
+    <SingUp />
   );
-}
+} ;
+
 

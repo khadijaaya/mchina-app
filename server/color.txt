@@ -1,0 +1,8 @@
+les coleurs utiliser :
+#3422F2 : button
+#F8F8FF : backgroundcolor de page
+#FFFFFF : textinput 
+#D1D1D1 : textinput-text
+#000000 : text-page
+#6F6F6F : text-menu
+#FF1A00 : delete 
