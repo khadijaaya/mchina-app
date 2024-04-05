@@ -1,9 +1,10 @@
-import SignUp from './screens/auth/SignUp';
+import Login from './screens/auth/Login';
+
 
 export default function App() {
-  return (
-    <SignUp />
-  );
-} ;
+  return <Login />;
+    
+  
+} 
 
 
