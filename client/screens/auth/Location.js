@@ -1,4 +1,4 @@
-import { View, Text,Image,SafeAreaView,StyleSheet, TextInput} from 'react-native'
+import { View, Text,Image,SafeAreaView,StyleSheet, TextInput, Button} from 'react-native'
 import React from 'react'
 
 
@@ -8,7 +8,9 @@ const Location = () => {
       <SafeAreaView style={styles.contairer} >
           <Image source={image1} style={styles.image} />
           <Text style={styles.pagetitle}>Ne vous inquiétez pas, vos données sont positions</Text>
-          <TextInput >Autoriser la localisation</TextInput>
+          <Button title='Autoriser votre location' onPress={() => console.log("votre position enregister")}
+            color="##3422f2"  >
+           </Button>
       </SafeAreaView>
     )
 }
