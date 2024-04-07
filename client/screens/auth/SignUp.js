@@ -4,7 +4,7 @@ import InputBox from '../../components/formes/InputBox';
 import SubmitButton from '../../components/formes/SubmitButton';
 // const image = require ("../../assets/City-drive.png") ;
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
   //states
   const[name, setName]= useState('')
   const[age, setAge]= useState('')
@@ -58,7 +58,10 @@ const SignUp = () => {
     loading={loading}
     handeleSubmit={handeleSubmit}
      />
-     <Text style= {styles.linkText} >Vous avez déjà un compte? <Text style={styles.link} >Se connecter </Text> </Text>
+     <Text style= {styles.linkText} >Vous avez déjà un compte? 
+     {" "} <Text style={styles.link} 
+     onPress={() => navigation.navigate("Login")}>Se connecter </Text> {" "}
+     </Text>
 
     </View>
   );

@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import InputBox from '../../components/formes/InputBox';
 import SubmitButton from '../../components/formes/SubmitButton';
 
-const Login = () => {
+const Login = ({navigation}) => {
     const[email, setEmail]= useState('')
     const[password, setPassword]= useState('')
     const[loading, setLoading]= useState(false)
@@ -27,7 +27,7 @@ const Login = () => {
     return (
       
       <View style= {styles.contairer} >
-        <Text style={styles.pagetitle}>CONNECTION :</Text>
+        <Text style={styles.pagetitle}>CONNECTION </Text>
         <View style= {{marginHorizontal: 40 , }}>
          
          <InputBox placeholder={'Adrasse Email'}
@@ -47,7 +47,11 @@ const Login = () => {
       loading={loading}
       handeleSubmit={handeleSubmit}
        />
-       <Text style= {styles.linkText} >Vous n'avez pas de compte ? <Text style={styles.link} >S'inscrire  </Text> </Text>
+       <Text style= {styles.linkText} >Vous n'avez pas de compte ? 
+       {" "} <Text style={styles.link} 
+       onPress={() => navigation.navigate("SignUp")}
+       >S'inscrire  </Text>{" "}
+        </Text>
   
       </View>
     );
