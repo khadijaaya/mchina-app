@@ -5,4 +5,4 @@
 # Running your React Native application
   #npm start
   
-# I have already installed react native, react navigation and express in project.  
+# I have already installed packages react native, react navigation, mongodb and express in project.  
