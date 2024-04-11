@@ -6,3 +6,4 @@
   #npm start
   
 # I have already installed packages react native, react navigation, mongodb and express ... in project.  
+ #npm run server
