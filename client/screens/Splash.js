@@ -1,11 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet, SafeAreaView,Image} from 'react-native'
-function Splash() {
-    const logo = require("../assets/logo1.png")
+ const Splash = ({navigation}) => {
+    const logo = require("../assets/logo2.png")
   return (
-    <SafeAreaView style={styles.contairer} >
-        <Image source={logo} style={styles.image} />
+    <SafeAreaView style={styles.contairer}  >
+        <Image source={logo} style={styles.image}   /> 
+        <Text style={styles.pagetitle} onPress={() => navigation.navigate("Login")}> MCHINA </Text>    
     </SafeAreaView>
+   
   )
 }
 const styles = StyleSheet.create({
@@ -20,9 +22,15 @@ const styles = StyleSheet.create({
         width : 320,
         left: 50,
        // alignContent:"center",
-        
-
-    }
+    },
+    pagetitle:{
+      bottom : 60,
+      fontSize:40,
+      fontWeight: "bold",
+      textAlign: "center",
+      color:"#000000", 
+      //marginBottom: 30, 
+  },
 });
 
 export default Splash

@@ -57,6 +57,7 @@ const SignUp = ({navigation}) => {
     <SubmitButton btntitle="Créer un compte" 
     loading={loading}
     handeleSubmit={handeleSubmit}
+    onPress={() => navigation.navigate("Login")}
      />
      <Text style= {styles.linkText} >Vous avez déjà un compte? 
      {" "} <Text style={styles.link} 

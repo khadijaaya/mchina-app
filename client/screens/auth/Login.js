@@ -46,11 +46,12 @@ const Login = ({navigation}) => {
       <SubmitButton btntitle="Connecter" 
       loading={loading}
       handeleSubmit={handeleSubmit}
+      onPress={() => navigation.navigate("Map")}
        />
        <Text style= {styles.linkText} >Vous n'avez pas de compte ? 
        {" "} <Text style={styles.link} 
        onPress={() => navigation.navigate("SignUp")}
-       >S'inscrire  </Text>{" "}
+       >S'inscrire  </Text> {" "}
         </Text>
   
       </View>
