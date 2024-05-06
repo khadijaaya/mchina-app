@@ -17,6 +17,8 @@ const Login = ({navigation}) => {
           setLoading(false);
           return;
       }
+        setLoading(false);
+        
         console.log('login data ==>', { email, password});
         setLoading(false);
       } catch (error) {
