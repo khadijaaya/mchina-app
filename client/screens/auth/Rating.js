@@ -3,8 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import StarRating from 'react-native-star-rating';
 
-export default class Rating extends Component {
-  constructor(props) {
+const Rating = () => {
+  constructor(props) 
+  {
     super(props);
     this.state = {
       generalStarCount: 3.5,
@@ -12,30 +13,29 @@ export default class Rating extends Component {
     };
   }
 
-  onGeneralStarRatingPress(rating) {
+  onGeneralStarRatingPress(rating) 
+  {
     this.setState({
       generalStarCount: rating,
     });
   }
 
-  onCustomStarRatingPress(rating) {
+  onCustomStarRatingPress(rating) 
+  {
     this.setState({
       customStarCount: rating,
     });
   }
 
-  render() {
+  render() 
+  {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          React Native Star Rating Component
+          How was your trip with me 
         </Text>
-        <Text style={styles.welcome}>
-          General Star Demo
-        </Text>
-        <Text style={styles.instructions}>
-          {'${this.state.generalStarCount} of stars is displayed'}
-        </Text>
+     
+     
         <StarRating
           disabled={false}
           maxStars={5}
@@ -44,31 +44,13 @@ export default class Rating extends Component {
           starSize={50}
           selectedStar={rating => this.onGeneralStarRatingPress(rating)}
         />
-        <Text style={styles.welcome}>
-          General Star Demo
-        </Text>
-        <Text style={styles.instructions}>
-          {'${this.state.customStarCount} of stars is displayed'}
-        </Text>
-        <StarRating
-          disabled={false}
-          emptyStar="ios-star-outline"
-          fullStar="ios-star"
-          halfStar="ios-star-half"
-          iconSet="Ionicons"
-          maxStars={7}
-          rating={this.state.customStarCount}
-          selectedStar={rating => this.onCustomStarRatingPress(rating)}
-          fullStarColor="red"
-          halfStarColor="green"
-          emptyStarColor="blue"
-          halfStarEnabled
-          starPadding={10}
-        />
+        
+       
+       
       </View>
     );
   }
-}
+}; export default Rating
 
 const styles = StyleSheet.create({
   container: {
@@ -84,11 +66,12 @@ const styles = StyleSheet.create({
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#f333333',
     marginBottom: 5,
   },
   star: {
     paddingHorizontal: 6,
     opacity: 0,
+    
   },
 });

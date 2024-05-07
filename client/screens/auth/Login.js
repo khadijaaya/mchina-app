@@ -9,7 +9,7 @@ const Login = ({navigation}) => {
     const[loading, setLoading]= useState(false)
     //fonction
     //btn fct
-    const handeleSubmit = () => {
+    const handeleSubmit = async() => {
       try {
         setLoading(true)
         if( !email || !password ){
@@ -17,11 +17,18 @@ const Login = ({navigation}) => {
           setLoading(false);
           return;
       }
+      
+    const {data} = await axios.post("http://192.168.11.125:8080/api/v1/auth/login" ,{password,email})
+    console.log("inscription data ==>", { email, password}
+
+    );
+    alert(data && data.message);
         setLoading(false);
         
         console.log('login data ==>', { email, password});
         setLoading(false);
       } catch (error) {
+        alert(error.response.data.message);
         setLoading(false);
         console.log(erreur);
       }

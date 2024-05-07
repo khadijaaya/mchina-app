@@ -1,16 +1,17 @@
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native'
 import React from 'react'
 
-const FindDrive = () => {
+const FindDrive = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Image
         style={styles.img}
         source={require('../assets/drive.png')}
       />
-        <Text style={styles.Text}> Please hold! we are searching for nearby drive for you</Text>
-      <TouchableOpacity style={styles.button} >
-        <Text style={styles.buttonText}>cancel Ride</Text>
+        <Text style={styles.Text} > Please hold! we are searching for nearby drive for you</Text>
+      <TouchableOpacity style={styles.sumbitBtn} >
+        <Text style={styles.btnText} onPress={() => navigation.navigate("SelectLocalisation")}
+        >cancel Ride</Text>
       </TouchableOpacity>
   </View>
   )
@@ -25,18 +26,21 @@ const styles = StyleSheet.create({
       borderWidth: 1,
     },
     
-    button: {
-      backgroundColor: 'blue',
-      padding: 10,
-      alignItems: 'center',
-      borderRadius: 5,
+    sumbitBtn: {
+      height: 50,
+      marginHorizontal: 30,
+      justifyContent: "center",
+      marginBottom: 20,
+      backgroundColor: "#3422F2",
+      borderRadius: 20 ,
+      marginTop: 10,
+      paddingLeft: 15,
     },
-    
-    buttonText: {
-      color: 'white',
-      fontWeight: 'bold',
-      fontSize:15,
-      textAlign:'center',
+    btnText:{
+        color:"#ffffff",
+        textAlign:"center",
+        fontSize: 20,
+        fontWeight:"400"
     },
   
     Text:{

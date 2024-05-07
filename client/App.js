@@ -8,17 +8,18 @@ import Login from "./screens/auth/Login";
 import About from "./screens/About";
 import SignUp from "./screens/auth/SignUp";
 import Splash from "./screens/Splash";
-import Locationfct from './screens/auth/Locationfct';
-import Rating from './screens/auth/Rating';
+//import Rating from './screens/auth/Rating';
 import HomeTest from './components/HomeTest';
 import SelectLocalisation from './components/SelectLocalisation';
-import Map2 from './components/map2';
 import FindDrive from './components/FindDrive';
-//import Map from './screens/auth/Map';
+import Map3 from './components/Map3';
+import Location from './screens/auth/Location';
+import RoleUser from './screens/RoleUser';
+import AddRoute from './screens/auth/AddRoute';
 
 export default function App() {
    const Stack = createNativeStackNavigator();
-   return  <HomeTest/> /*(
+   return  (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Splash' >
         <Stack.Screen name= "Splash" 
@@ -34,13 +35,13 @@ export default function App() {
           options={{headerShown: false}}
         />
         
-        <Stack.Screen name= "Locationfct" 
+        <Stack.Screen name= "Location" 
         component={Login} 
           options={{headerShown: false}}
         />
       </Stack.Navigator>
   </NavigationContainer>
-   ); */
+   ); 
 
   }
   

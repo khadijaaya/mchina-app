@@ -3,7 +3,8 @@ import React, {useState} from 'react';
 import InputBox from '../../components/formes/InputBox';
 import SubmitButton from '../../components/formes/SubmitButton';
 // const image = require ("../../assets/City-drive.png") ;
-
+import axios from 'axios';
+import { Message } from 'react-native-gifted-chat';
 const SignUp = ({navigation}) => {
   //states
   const[name, setName]= useState('')
@@ -13,7 +14,7 @@ const SignUp = ({navigation}) => {
   const[loading, setLoading]= useState(false)
   //fonction
   //btn fct
-  const handeleSubmit = () => {
+  const handeleSubmit = async () => {
     try {
       setLoading(true)
       if(!name || !age || !email || !password ){
@@ -21,9 +22,13 @@ const SignUp = ({navigation}) => {
         setLoading(false);
         return;
     }
-      console.log('inscription data ==>', {name, age, email, password});
-      setLoading(false);
+    setLoading(false);
+    const { data } = await axios.post("http://192.168.11.125:8080/api/v1/auth/register" ,{name, age, password, email}
+    );
+    alert( data && data.message);
+    console.log("inscription data ==>", {name, age, email, password});
     } catch (error) {
+      alert(error.response.data.message);
       setLoading(false);
       console.log(erreur);
       

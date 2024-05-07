@@ -1,4 +1,4 @@
-import { View, Text,Image,SafeAreaView,StyleSheet, TextInput, Button,Alert} from 'react-native'
+import { View, Text,Image,SafeAreaView,StyleSheet,TouchableOpacity, TextInput, Button,Alert} from 'react-native'
 import {useEffect,useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import * as Location1 from 'expo-location'
@@ -51,12 +51,10 @@ const Location = () => {
           <Image source={image1} style={styles.image} />
           <Text style={styles.pagetitle}>Ne vous inquiétez pas, vos 
           données sont positions</Text>
-          
-            <SubmitButton btntitle="Location" 
-            onPress={getPermissions}
-            loading={loading}
-            handeleSubmit={getPermissions}
-            />
+          <TouchableOpacity style={styles.sumbitBtn} >
+         <Text style={styles.btnText} onPress={() => navigation.navigate("HomeTest")}
+        >Location</Text>
+        </TouchableOpacity>
       <StatusBar style="auto" />
       
       </SafeAreaView>
@@ -85,27 +83,23 @@ const styles = StyleSheet.create({
         left: 20,
        // alignContent:"center",
     },
-   /* Inputbtn:{ color: "#3422F2",
-        lineHeight : 1.5,
-        width: 300,
-        position: "relative",
-        display:"flex",
-        justifyContent:"center",
-        backgroundColor:"#000000",
-        alignItems:"center",
-        overflow:"hidden",
-    }*/
+    sumbitBtn: {
+        height: 50,
+        marginHorizontal: 30,
+        justifyContent: "center",
+        marginBottom: 20,
+        backgroundColor: "#3422F2",
+        borderRadius: 20 ,
+        marginTop: 10,
+        paddingLeft: 15,
+      },
+      btnText:{
+          color:"#ffffff",
+          textAlign:"center",
+          fontSize: 20,
+          fontWeight:"400"
+      },
+   
 });
 
 export default Location
-/*<TextInput value={address} onChangeText={setAddress} placeholder='adress' style={styles.pagetitle} />
-          <Button
-            onPress={reserveGeocode}
-            title="Location"
-            color="#3422F2"      />
-            <SubmitButton btntitle="geolocation" 
-            onPress={reserveGeocode}
-            loading={loading}
-            handeleSubmit={reserveGeocode}
-            
-       />*/
